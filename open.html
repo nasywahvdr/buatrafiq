@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movies - Open This ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#141414;
+    font-family:'Poppins',sans-serif;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    padding:20px 60px;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left-nav{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.logo{
+    color:#e50914;
+    font-size:38px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#d2d2d2;
+    text-decoration:none;
+    transition:0.3s;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.active{
+    color:white !important;
+    font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+    height:85vh;
+    background:
+    linear-gradient(to top, #141414 5%, transparent 40%),
+    linear-gradient(to right, rgba(0,0,0,0.9), transparent 65%),
+    url('images/pic2.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 60px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:35px;
+    color:#d2d2d2;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.play-btn{
+    background:white;
+    color:black;
+    border:none;
+    padding:14px 34px;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.info-btn{
+    background:rgba(109,109,110,0.7);
+    color:white;
+    border:none;
+    padding:14px 34px;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* SECTION */
+
+.section{
+    padding:40px 60px;
+}
+
+.section h2{
+    font-size:30px;
+    margin-bottom:22px;
+}
+
+/* LETTER TABLE */
+
+.letter-box{
+    background:#1a1a1a;
+    border-radius:22px;
+    overflow:hidden;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#202020;
+    padding:22px;
+    text-align:left;
+    color:#bdbdbd;
+    font-size:15px;
+}
+
+td{
+    padding:22px;
+    border-bottom:1px solid #262626;
+    transition:0.3s;
+}
+
+tr:hover td{
+    background:#242424;
+}
+
+.number{
+    width:80px;
+    color:#b3b3b3;
+}
+
+.from{
+    color:#b3b3b3;
+}
+
+/* FEATURED MESSAGE */
+
+.featured-message{
+    margin-top:35px;
+    background:#1a1a1a;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+}
+
+.featured-message img{
+    width:320px;
+    height:100%;
+    object-fit:cover;
+}
+
+.message-content{
+    padding:35px;
+    line-height:38px;
+    color:#d8d8d8;
+    font-size:18px;
+}
+
+.message-content h2{
+    font-size:40px;
+    margin-bottom:25px;
+    color:white;
+}
+
+/* PLAYER */
+
+.player{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:90px;
+    background:#0f0f0f;
+    border-top:1px solid #262626;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 35px;
+    z-index:999;
+}
+
+.player-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.player-left img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.song-title{
+    font-size:17px;
+    font-weight:600;
+}
+
+.song-artist{
+    color:#9f9f9f;
+    font-size:14px;
+    margin-top:4px;
+}
+
+.player-center button{
+    width:58px;
+    height:58px;
+    border:none;
+    border-radius:50%;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.player-right{
+    color:#9f9f9f;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        padding:20px;
+    }
+
+    .hero{
+        padding:0 20px;
+        height:70vh;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+        line-height:30px;
+    }
+
+    .section{
+        padding:30px 20px;
+    }
+
+    .featured-message{
+        flex-direction:column;
+    }
+
+    .featured-message img{
+        width:100%;
+        height:320px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+    <div class="left-nav">
+
+        <div class="logo">
+            NETFLIX
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="foryou.html">
+                Open This
+            </a>
+
+            <a href="open.html" class="active">
+                For Rafiq
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Open This ❤️
+        </h1>
+
+        <p>
+            A collection of little messages,
+            tiny reminders,
+            and all the love i could never fully explain.
+            If one day things get hard,
+            come back here and remember
+            that someone loves you deeply.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="play-btn" onclick="toggleMusic()">
+                ▶ Play
+            </button>
+
+            <button class="info-btn">
+                More Feelings
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LETTERS -->
+
+<section class="section">
+
+    <h2>
+        Letters For You
+    </h2>
+
+    <div class="letter-box">
+
+        <table>
+
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>From</th>
+            </tr>
+
+            <tr>
+                <td class="number">1</td>
+                <td>HAII RAFIQ ILY 3000 ❤️❤️</td>
+                <td class="from">Ney</td>
+            </tr>
+
+            <tr>
+                <td class="number">2</td>
+                <td>AAKUU SAYANG BANGET SAMA KAMUU</td>
+                <td class="from">Ney</td>
+            </tr>
+
+            <tr>
+                <td class="number">3</td>
+                <td>I LOVE YOU MORE THAN ANYTHING</td>
+                <td class="from">Ney</td>
+            </tr>
+
+            <tr>
+                <td class="number">4</td>
+                <td>MAKASIH UDAH SAYANG SAMA AKU</td>
+                <td class="from">Ney</td>
+            </tr>
+
+            <tr>
+                <td class="number">5</td>
+                <td>I LOVE YOU IN EVERY UNIVERSE</td>
+                <td class="from">Ney</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- FEATURED MESSAGE -->
+
+    <div class="featured-message">
+
+        <img src="photos/12.jpg">
+
+        <div class="message-content">
+
+            <h2>
+                For My Special Person
+            </h2>
+
+            <p>
+
+                Thank you for staying alive until today.
+
+                Thank you for trying your best even when things feel impossible.
+
+                I know sometimes you feel tired,
+                lonely,
+                and not enough.
+
+                But please remember this forever:
+
+                you are loved more than you think.
+
+                You deserve happiness,
+                soft days,
+                peaceful nights,
+                and someone who chooses you over and over again.
+
+                And i will always choose you.
+
+                I love you endlessly ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PLAYER -->
+
+<div class="player">
+
+    <div class="player-left">
+
+        <div>
+
+            <div class="song-title">
+                Sextape
+            </div>
+
+            <div class="song-artist">
+                Deftones
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="player-center">
+
+        <button onclick="toggleMusic()" id="playBtn">
+            ▶
+        </button>
+
+    </div>
+
+    <div class="player-right">
+        Song that reminds me of you
+    </div>
+
+</div>
+
+<audio id="audio">
+    <source src="photos/Sextape.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+
+let isPlaying = false;
+
+function toggleMusic(){
+
+    if(isPlaying){
+
+        audio.pause();
+        playBtn.innerHTML = "▶";
+        isPlaying = false;
+
+    }else{
+
+        audio.play();
+        playBtn.innerHTML = "⏸";
+        isPlaying = true;
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

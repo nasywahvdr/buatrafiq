@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Netflix</title>
+<meta name="description" content="Video streaming website Netflix clone. Frontend - HTML5, Pure CSS3 [flexbox], JS, OWL Carousel, JQuery |" />
+    <meta name="robots" content="index, follow" />
+	
+	<!-- og properties -->
+	
+	<meta property="og:site_name" content="Rajesh Royal" />
+	<meta property="article:publisher" content="https://www.facebook.com/Rajesh.royal.896/" />
+
+	<meta property="og:image" content="../images/site-image-description.PNG" />
+
+	<!-- -->
+    
+    <link rel="stylesheet" href="../assets/lib/owl.carousel.css" />
+    <script src="../assets/lib/jquery 3.5.0.js"></script>
+    <script src="../assets/lib/owl.carousel.js"></script>
+
+
+    <!--main script file-->
+    <script src="../assets/js/main-script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha256-t2kyTgkh+fZJYRET5l9Sjrrl4UDain5jxdbqe8ejO8A=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/browse.css">
+    
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <main id="mainContainer" class="p-b-40">
+        <div>
+            <header class="d-flex space-between flex-center flex-middle">
+                <div class="nav-links d-flex flex-center flex-middle">
+                    <a href="#">
+                        <h2 class="logo logo-text red-color f-s-28 m-r-25">NETFLIX</h2>
+                        <h2 class="second-logo-text red-color f-s-28">N</h2>
+                    </a>
+                    <a href="#" class="nav-item home">Home</a>
+                    <a href="foryou.html" class="nav-item">Open This</a>
+                    <a href="open.html" class="nav-item">For Rafiq</a>
+                    <a href="#" class="nav-item latest">Latest</a>
+                    <a href="#" class="nav-item">My List</a>
+                </div>
+                <div class="righticons d-flex flex-end flex-middle">
+                    <a href="#"><img src="icons/search.svg" alt="search icon"></a>
+                    <div class="dropdown notification">
+                        <img src="icons/notification.svg" alt="notificatio icon">
+                        <div class="dropdown-content">
+                            <a href="#" class="profile-item d-flex flex-middle">
+                                <img src="icons/user2.png" alt="user profile icon" class="user-icon">
+                                <span>Today is your Birthday</span></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <img src="icons/user-image-green.png" alt="user profile icon" class="user-icon"> <span class="profile-arrow"></span>
+
+                        <div class="dropdown-content">
+                            <div class="profile-links">
+                                <a href="#" class="profile-item last" >Manage Profiles</a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="links d-flex direction-column">
+                                <a href="#">Account</a>
+                                <a href="#">Help Center</a>
+                                <a href="#">Sign Out of Netflix</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+
+            <!-- hero section -->
+            <div class="">
+                <section id="browse-dashboard" class=" d-flex direction-column flex-start middle-align">
+                    <div>
+                        <!--trailer video-->
+                        <video class="hero-background-image" id="hero-video"
+                            poster="photos/rafiq.jpg">
+                        </video>
+
+                        
+                        <!--left shadow-->
+                        <div class="shadow-layer"></div>
+                    </div>
+
+                    <div class="container text-container" style="z-index: 3;">
+                        <div class="contentlogo">
+                            <img src="photos/for.png" alt="content logo"
+                                class="show-logo" />
+                        </div>
+                        <!--top 10 ranking badge svg-->
+                        <div class="ranking d-flex m-t-20 flex-middle"
+                        style="
+                        background:rgba(255,255,255,0.08);
+                        padding:14px 20px;
+                        border-radius:14px;
+                        backdrop-filter:blur(10px);
+                        width:fit-content;
+                        ">
+                        
+                            <span class="p-l-8"
+                            style="
+                            font-size:20px;
+                            color:#ffffff;
+                            ">
+                        
+                                May the sky meet the line, be the bluest of the blue
+                        
+                            </span>
+                        
+                        </div>
+                        <div class="synopsis m-t-20" style="max-width: 500px;">
+                            <p>
+                                Derap langkah? Tidak. Itu derap kokohnya pundakmu. Siapa sangka pundak itu yang kuharapkan untuk disandari, anomali yang tiba tiba datang entah sebagai entitas tapi menjadi dunia bagiku dan betapa beruntungnya atas kesemestaan dalam dirimu. Lantas kamu begitu mumpuni sejauh dan sepanjang hari ini. Bangga, sungguh. Aku yakin tumpah ruah yang telah mengapresiasimu, biarkan aku mengambil bagian di dalamnya untuk divisi tahun tahun lainnya. Jadikan versi terbaikmu terlampaui nantinya, I love you no matter what, ill wait for you even after, ever. long live of a glorious life, <br> I wish the encyclopedia break the limit, so shine, my sky.
+
+                            </p>
+                        </div>
+                        <audio poster="photos/poster.jpg" id="audio-player" src="photos/Sextape.mp3" type="audio/mpeg"></audio>
+
+                        <div class="buttons-container m-t-20">
+                            <button class="play-button" onclick="playAudio()">
+                                <span>
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M6 4l15 8-15 8z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                <a href="javascript:void(0);">Play</a>
+                            </button>
+
+                            <button class="more-info-button m-t-20"><span>
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-2 0a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8zm-9 6v-7h2v7h-2zm1-8.75a1.21 1.21 0 0 1-.877-.364A1.188 1.188 0 0 1 10.75 8c0-.348.123-.644.372-.886.247-.242.54-.364.878-.364.337 0 .63.122.877.364.248.242.373.538.373.886s-.124.644-.373.886A1.21 1.21 0 0 1 12 9.25z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </span> 
+                                More Info
+                            </button>
+                            <div id="popup" class="popup-container">
+                                <div class="popup-content">
+                                    <span class="close-btn" id="closePopup">&times;</span>
+                                    <div class="popup-img">
+                                        <img src="photos/7.jpg" alt="Sample Image" style="width:100%; border-radius: 5px;">
+                                    </div>
+                                    <div class="popup-msg">
+                                        <p>For My Special Person, Rafiq. Makasih udah hadir di hidup aku. Thanks for being here, being in my life. I love you so much. Please don't ever leave me, I just want you, and only you. I love you the way you are, fiq you are the best thing i've ever met and i've ever done. You are perfect, dont ever think that you are a mess, you deserve happiness, you deserve love, and you deserve to live happily forever ❤️
+
+                                            Kalau kamu sedih, inget yaa kamu punya aku inget aku selalu ada disini buat aku, aku minta maaf ya sayang kalau aku ga sabaran, marah marah terus, banyak kurangnya, tapi sebenernya aku sayang kok sama kamu, sayang banget malaah, makasih udah sayang dan mau nerima aku, aku selalu bersyukur punya dan kenal kamu sekarang.. 
+                                            
+                                            You deserve to be loved, please don't ever think that you're alone ya sayang, i'm always here for you. Put your happiness first, love yourself and believe you deserve to be happy. Thank you for at least did your best, i trust you, please trust and believe yourself juga ya sayang, I know you can doing all those things in the world, i trust you, kamu keren aku selalu salut dan bangga sama kamu yang kamu gapernah cape kamu selalu pretending to be kuat dan itu sangat sangat lebih dari cukup, you are more than enough, i know you can baby, you reallymean so much to me. I care about you more that you can ever know. I just want you, and only you. Janji ya sayang? don't ever leave me. You're the best person i've ever know. You are the one i love, let me cherish your life forever i would and ofcourse give my best for you, i will be the kind of person you want me to be. I love you so much, Rafiq.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="black-background">
+
+                <section id="romantic" class="container p-t-40">
+                    <h4 class="romantic-heading">
+                        Cute Photos of Us
+                    </h4>
+                
+                    <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
+                
+                        <a href="#">
+                            <img src="photos/1.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/2.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/3.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item position-relative overflow-hidden"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/4.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/5.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/6.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                    </div>
+                </section>
+                
+                <section id="romantic" class="container p-t-40">
+                    <h4 class="romantic-heading">
+                        Fav Picts
+                    </h4>
+                
+                    <div class="romantic-container d-flex flex-start flex-middle flex-no-wrap owl-carousel">
+                
+                        <a href="#">
+                            <img src="photos/7.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/17.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/9.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/10.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/11.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                        <a href="#">
+                            <img src="photos/12.jpg" alt=""
+                                class="mylist-img p-r-10 p-t-10 image-size item"
+                                style="width:220px; height:220px; object-fit:cover; border-radius:20px;">
+                        </a>
+                
+                    </div>
+                </section>
+        <footer class="mainfooter d-flex direction-column space-between" id=" footer">
+            <div class="container footer-container flex-start">
+                <div class="widgets d-flex space-between">
+                    <div class="first-widget">
+                        <ul>
+                            <li class="list-item">Audio and Subtitles</li>
+                            <li class="list-item">Media Center</li>
+                            <li class="list-item">Privacy</li>
+                            <li class="list-item">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="second-widget">
+                        <ul>
+                            <li class="list-item">Help Center</li>
+                            <li class="list-item">Cookie</li>
+                            <li class="list-item">Jobs</li>
+                        </ul>
+                    </div>
+                    <div class="third-widget">
+                        <ul>
+                            <li class="list-item">Audio Description</li>
+                            <li class="list-item">Investor Relations</li>
+                            <li class="list-item">Legal Notice</li>
+                        </ul>
+                    </div>
+                    <div class="forth-widget">
+                        <ul>
+                            <li class="list-item">Gift Card</li>
+                            <li class="list-item">Term Of Use</li>
+                            <li class="list-item">Corporate Information</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="button service">Service Code</button>
+                <p class="copyright">@copyright 2026 nasywahvdr, Inc.</p>
+            </div>
+
+
+        </footer>
+        </div>
+
+        
+    </main>
+
+    <div class="footer-navigation d-flex space-between">
+        <a href="" class="nav-item active">
+            <i class="fa fa-home" aria-hidden="true"></i> </br>
+            Home
+        </a>
+        <a href="" class="nav-item">
+            <i class="fa fa-search" aria-hidden="true"></i></br>
+            Search
+        </a>
+        <a href="" class="nav-item">
+            <i class="fa fa-film" aria-hidden="true"></i></br>
+            Latest
+        </a>
+        <a href="" class="nav-item">
+            <i class="fa fa-user" aria-hidden="true"></i></br>
+            Account
+        </a>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audio-player");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+        // Ambil elemen popup dan tombol close
+var popup = document.getElementById("popup");
+var closeBtn = document.getElementById("closePopup");
+
+// Ketika tombol More Info diklik, popup akan muncul
+document.querySelector('.more-info-button').addEventListener('click', function() {
+    popup.style.display = "block";
+});
+
+// Ketika tombol close diklik, popup akan tertutup
+closeBtn.onclick = function() {
+    popup.style.display = "none";
+}
+
+// Ketika pengguna mengklik di luar popup, popup akan tertutup
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+
+    </script>
+</body>
+
+</html>
